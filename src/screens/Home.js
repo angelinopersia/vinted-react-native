@@ -40,11 +40,34 @@ const Home = ({ navigation }) => {
 					<Text>See all</Text>
 				</View>
 				<PopularItems horizontal={true}>
-					<PopularItem />
-					<PopularItem />
-					<PopularItem />
-					<PopularItem />
-					<PopularItem />
+					<PopularItem
+						destination={"Home"}
+						image=""
+						price="30.00"
+						sizes="M / 38 / 10"
+						brand="Artigli"
+					/>
+					<PopularItem
+						destination={"Home"}
+						image=""
+						price="4.00"
+						sizes="S / 36 / 8"
+						brand="H&M"
+					/>
+					<PopularItem
+						destination={"Home"}
+						image=""
+						price="5.99"
+						sizes="M / 38 / 10"
+						brand=""
+					/>
+					<PopularItem
+						destination={"Home"}
+						image=""
+						price="4.00"
+						sizes="One size"
+						brand="Boutique indépendante"
+					/>
 					<Text>See all popular items</Text>
 				</PopularItems>
 			</Scrollable>
@@ -62,19 +85,21 @@ const Container = styled.View`
 `;
 
 const Section = styled.Text`
+	padding: 15px 18px 10px 18px;
 	font-size: 25px;
 `;
 
 const PopularItems = styled.ScrollView`
-	padding: 10px 0 60px 0;
+	padding: 15px 18px 10px 18px;
 `;
 
 const Categories = styled.View`
+	padding: 15px 18px 10px 18px;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 10px 0 60px 0;
 `;
 
 const Scrollable = styled.ScrollView`
-	padding: 15px 18px 10px 18px;
+	/* border: red;
+	border-width: 1px; */
 `;

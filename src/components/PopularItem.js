@@ -3,11 +3,13 @@ import { useNavigation } from "@react-navigation/core";
 import { View, Button, Text, TouchableOpacity } from "react-native";
 import styled from "styled-components";
 
-const Category = ({ destination, image, title, price }) => {
+const Category = ({ destination, image, price, sizes, brand }) => {
 	const [favorite, setFavorite] = useState(false);
-	useEffect(() => {
-		console.log(favorite);
-	});
+	const [favCount, setFavCount] = useState();
+
+	// useEffect(() => {
+	// 	console.log(favorite);
+	// });
 
 	const { navigate } = useNavigation();
 	return (
@@ -16,32 +18,36 @@ const Category = ({ destination, image, title, price }) => {
 				<ItemPic source={image} onPress={() => navigate(destination)} />
 			</PopularStyle>
 			<InfoContainer>
-				<LeftSubContainer>
-					<PriceText>€17.00</PriceText>
-					<Sizes>XS / 34 / 6</Sizes>
-					<Brand>SheInside</Brand>
-				</LeftSubContainer>
-				<RightSubContainer>
-					{favorite === false ? (
-						<TouchableOpacity
-							onPress={() => setFavorite(!favorite)}
-						>
-							<Fav
-								source={require("../images/favorite_heart_EMPTY.png")}
-							/>
-						</TouchableOpacity>
-					) : (
-						<TouchableOpacity
-							onPress={() => setFavorite(!favorite)}
-						>
-							<Fav
-								source={require("../images/favorite_heart_FULL.png")}
+				<TopContainer>
+					<LeftSubContainer>
+						<PriceText>{"€" + price}</PriceText>
+					</LeftSubContainer>
+					<RightSubContainer>
+						{favorite === false ? (
+							<TouchableOpacity
 								onPress={() => setFavorite(!favorite)}
-							/>
-						</TouchableOpacity>
-					)}
-					<FavNumbers>10</FavNumbers>
-				</RightSubContainer>
+							>
+								<Fav
+									source={require("../images/favorite_heart_EMPTY.png")}
+								/>
+							</TouchableOpacity>
+						) : (
+							<TouchableOpacity
+								onPress={() => setFavorite(!favorite)}
+							>
+								<Fav
+									source={require("../images/favorite_heart_FULL.png")}
+									onPress={() => setFavorite(!favorite)}
+								/>
+							</TouchableOpacity>
+						)}
+						<FavNumbers>10</FavNumbers>
+					</RightSubContainer>
+				</TopContainer>
+				<BottomContainer>
+					<Sizes>{sizes}</Sizes>
+					<Brand>{brand}</Brand>
+				</BottomContainer>
 			</InfoContainer>
 		</Container>
 	);
@@ -68,8 +74,16 @@ const ItemPic = styled.Image`
 `;
 
 const InfoContainer = styled.View`
-	justify-content: space-between;
+	/*  */
+`;
+
+const TopContainer = styled.View`
 	flex-direction: row;
+	height: 30px;
+`;
+
+const BottomContainer = styled.View`
+	margin-top: -5px;
 `;
 
 const LeftSubContainer = styled.View`
@@ -85,16 +99,19 @@ const RightSubContainer = styled.View`
 `;
 
 const PriceText = styled.Text`
-	font-size: 16px;
+	font-size: 15px;
 `;
 
 const Sizes = styled.Text`
 	color: #999999;
+	font-size: 12px;
+	padding-left: 5px;
 `;
 
 const Brand = styled.Text`
 	color: #999999;
-	/* font-size: 15px; */
+	font-size: 12px;
+	padding-left: 5px;
 `;
 
 const Fav = styled.Image`
