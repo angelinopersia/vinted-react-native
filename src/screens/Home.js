@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import CategoryComp from "../components/Category";
 import ItemCard from "../components/ItemCard";
 import Brand from "../components/Brand";
+import Suggested from "../components/Suggested";
 
 import SeeAll from "../components/SeeAll";
 
@@ -18,7 +19,7 @@ const Home = () => {
 	return (
 		<Container>
 			<SearchHeader />
-			<Scrollable>
+			<Scrollable showsVerticalScrollIndicator={false}>
 				{/* CATEGORIES */}
 				<Section>Shop by category</Section>
 				<Categories>
@@ -51,7 +52,10 @@ const Home = () => {
 						See all
 					</MiniSeeAll>
 				</PopularView>
-				<PopularItems horizontal={true}>
+				<PopularItems
+					horizontal={true}
+					showsHorizontalScrollIndicator={false}
+				>
 					<ItemCard
 						destination={"Home"}
 						image={require("../images/some_dress.jpg")}
@@ -109,6 +113,20 @@ const Home = () => {
 					<Brand destination="Home" text="Tommy Hilfiger" />
 					<Brand destination="Home" text="Ralph Lauren" />
 				</BrandContainer>
+
+				{/* SUGGESTED SEARCHES */}
+				<Section>Suggested searches</Section>
+				<SuggestedContainer
+					horizontal={true}
+					showsHorizontalScrollIndicator={false}
+				>
+					<Suggested title="Nike" viewNum="8.85M views" />
+					<Suggested title="Levi's" viewNum="3.06M views" />
+					<Suggested title="Jordan" viewNum="1.69M views" />
+					<Suggested title="Converse shoes" viewNum="422K views" />
+					<Suggested title="Pokémon" viewNum="2.16M views" />
+					<Suggested title="Zara" viewNum="8.57M views" />
+				</SuggestedContainer>
 			</Scrollable>
 
 			<Footer activePage="Home" />
@@ -158,6 +176,10 @@ const BrandContainer = styled.View`
 	flex-direction: row;
 	align-items: stretch;
 	padding: 5px 35px 0 15px;
+`;
+
+const SuggestedContainer = styled.ScrollView`
+	flex-direction: row;
 `;
 
 const Scrollable = styled.ScrollView`
