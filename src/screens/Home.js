@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 
 import CategoryComp from "../components/Category";
 import ItemCard from "../components/ItemCard";
+import Brand from "../components/Brand";
 
 import SeeAll from "../components/SeeAll";
 
@@ -85,6 +86,29 @@ const Home = () => {
 					/>
 					<SeeAll destination="Popular" />
 				</PopularItems>
+
+				{/* SHOP BY BRAND */}
+				<Section>Shop by brand</Section>
+				<BrandContainer>
+					<Brand destination="Home" text="Disney" />
+					<Brand destination="Home" text="Gémo" />
+					<Brand destination="Home" text="Kiabi" />
+					<Brand destination="Home" text="Pimkie" />
+					<Brand destination="Home" text="New Balance" />
+					<Brand destination="Home" text="Converse" />
+					<Brand destination="Home" text="San Marina" />
+					<Brand destination="Home" text="Promod" />
+					<Brand destination="Home" text="Bonobo" />
+					<Brand destination="Home" text="Vans" />
+					<Brand destination="Home" text="Adidas" />
+					<Brand destination="Home" text="Reebok" />
+					<Brand destination="Home" text="Petit Bateau" />
+					<Brand destination="Home" text="Miss Captain" />
+					<Brand destination="Home" text="Caroll" />
+					<Brand destination="Home" text="Diesel" />
+					<Brand destination="Home" text="Tommy Hilfiger" />
+					<Brand destination="Home" text="Ralph Lauren" />
+				</BrandContainer>
 			</Scrollable>
 
 			<Footer activePage="Home" />
@@ -126,6 +150,14 @@ const Categories = styled.View`
 	padding: 15px 18px 10px 18px;
 	flex-direction: row;
 	justify-content: space-between;
+`;
+
+const BrandContainer = styled.View`
+	flex: 1;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: stretch;
+	padding: 5px 35px 0 15px;
 `;
 
 const Scrollable = styled.ScrollView`
