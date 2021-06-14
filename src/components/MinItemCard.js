@@ -3,16 +3,7 @@ import { useNavigation } from "@react-navigation/core";
 import { TouchableOpacity } from "react-native";
 import styled from "styled-components";
 
-const ItemCard = ({
-	destination,
-	image,
-	price,
-	favNum,
-	sizes,
-	brand,
-	poster,
-	pfp,
-}) => {
+const MinItemCard = ({ destination, image, price, favNum, sizes, brand }) => {
 	const [favorite, setFavorite] = useState(false);
 	const [favCount, setFavCount] = useState(favNum);
 
@@ -21,18 +12,12 @@ const ItemCard = ({
 			setFavCount(favNum + 1);
 		} else if (favorite === false) {
 			setFavCount(favNum);
-		} else {
-			throw console.error();
 		}
 	});
 
 	const { navigate } = useNavigation();
 	return (
 		<Container>
-			<OPsProfile>
-				<OPsAvatar source={pfp} />
-				<OPsUsername>{poster}</OPsUsername>
-			</OPsProfile>
 			<CardStyle activeOpacity={1}>
 				<ItemPic source={image} onPress={() => navigate(destination)} />
 			</CardStyle>
@@ -76,26 +61,6 @@ const ItemCard = ({
 
 const Container = styled.View`
 	align-items: center;
-	padding: 10px 0 20px 0;
-`;
-
-const OPsProfile = styled.TouchableOpacity`
-	flex-direction: row;
-	align-items: center;
-	width: 190px;
-	padding-bottom: 5px;
-`;
-
-const OPsUsername = styled.Text`
-	color: #999999;
-	font-size: 12px;
-`;
-
-const OPsAvatar = styled.Image`
-	border-radius: 50px;
-	margin: 0 8px 0 8px;
-	height: 28px;
-	width: 28px;
 `;
 
 const CardStyle = styled.TouchableOpacity`
@@ -104,13 +69,13 @@ const CardStyle = styled.TouchableOpacity`
 	justify-content: center;
 	padding: 10px;
 	margin: 5px;
-	width: 190px;
-	height: 260px;
+	width: 160px;
+	height: 220px;
 `;
 
 const ItemPic = styled.Image`
-	width: 190px;
-	height: 260px;
+	width: 160px;
+	height: 220px;
 	resize-mode: cover;
 `;
 
@@ -136,7 +101,7 @@ const RightSubContainer = styled.View`
 	padding: 5px;
 	flex-direction: row;
 	justify-content: flex-end;
-	width: 95px;
+	width: 65px;
 `;
 
 const PriceText = styled.Text`
@@ -168,7 +133,6 @@ const FavNumbers = styled.Text`
 `;
 
 // arrive on search page AND specific tab according to title
-// Add onpress for the profiles
 // No touchableopacity animation
 
-export default ItemCard;
+export default MinItemCard;

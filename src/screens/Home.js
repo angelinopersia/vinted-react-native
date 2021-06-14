@@ -8,6 +8,7 @@ import SearchHeader from "../components/SearchHeader";
 import Footer from "../components/Footer";
 
 import CategoryComp from "../components/Category";
+import MinItemCard from "../components/MinItemCard";
 import ItemCard from "../components/ItemCard";
 import Brand from "../components/Brand";
 import Suggested from "../components/Suggested";
@@ -56,7 +57,7 @@ const Home = () => {
 					horizontal={true}
 					showsHorizontalScrollIndicator={false}
 				>
-					<ItemCard
+					<MinItemCard
 						destination={"Home"}
 						image={require("../images/some_dress.jpg")}
 						price="30.00"
@@ -64,15 +65,16 @@ const Home = () => {
 						sizes="M / 38 / 10"
 						brand="Artigli"
 					/>
-					<ItemCard
+					<MinItemCard
 						destination={"Home"}
 						image={require("../images/some_clothes.jpg")}
 						price="4.00"
 						favNum={12}
 						sizes="S / 36 / 8"
 						brand="H&M"
+						minimal
 					/>
-					<ItemCard
+					<MinItemCard
 						destination={"Home"}
 						image={require("../images/some_top.jpg")}
 						price="5.99"
@@ -80,7 +82,7 @@ const Home = () => {
 						sizes="M / 38 / 10"
 						brand=""
 					/>
-					<ItemCard
+					<MinItemCard
 						destination={"Home"}
 						image={require("../images/some_necklace.jpg")}
 						price="4.00"
@@ -127,6 +129,71 @@ const Home = () => {
 					<Suggested title="Pokémon" viewNum="2.16M views" />
 					<Suggested title="Zara" viewNum="8.57M views" />
 				</SuggestedContainer>
+
+				{/* NEWSFEED */}
+				<Section>Newsfeed</Section>
+				<NewsfeedContainer>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+				</NewsfeedContainer>
 			</Scrollable>
 
 			<Footer activePage="Home" />
@@ -180,6 +247,14 @@ const BrandContainer = styled.View`
 
 const SuggestedContainer = styled.ScrollView`
 	flex-direction: row;
+`;
+
+const NewsfeedContainer = styled.View`
+	flex: 1;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
 `;
 
 const Scrollable = styled.ScrollView`
