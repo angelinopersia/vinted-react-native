@@ -11,6 +11,7 @@ import LogIn from "./src/screens/LogIn";
 
 import Tutorial from "./src/screens/Tutorial";
 import Home from "./src/screens/Home";
+import Popular from "./src/screens/Popular";
 import Search from "./src/screens/Search";
 import Sell from "./src/screens/Sell";
 
@@ -60,9 +61,14 @@ export default function App() {
 				<Stack.Screen name="Tutorial" component={Tutorial} />
 
 				<Stack.Screen name="Home" component={Home} />
+				<Stack.Screen name="Popular" component={Popular} />
 				<Stack.Screen name="Search" component={Search} />
 				<Stack.Screen name="Sell" component={Sell} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
 }
+
+// It very likely just shifts massive components rather than
+// going from page to page considering
+// stuff like the footer are unchanged and never load or anything

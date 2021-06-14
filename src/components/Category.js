@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/core";
-import { View, Button, Text, TouchableOpacity } from "react-native";
+import { Text } from "react-native";
 import styled from "styled-components";
 
 const Category = ({ destination, image, title }) => {

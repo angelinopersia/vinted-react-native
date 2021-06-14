@@ -1,17 +1,24 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/core";
 import { View, Button, Text, ScrollView } from "react-native";
 import styled from "styled-components";
 
+// Components
+import SearchHeader from "../components/SearchHeader";
+import Footer from "../components/Footer";
+
 import CategoryComp from "../components/Category";
 import ItemCard from "../components/ItemCard";
-import Footer from "../components/Footer";
-import SearchHeader from "../components/SearchHeader";
 
-const Home = ({ navigation }) => {
+import SeeAll from "../components/SeeAll";
+
+const Home = () => {
+	const { navigate } = useNavigation();
 	return (
 		<Container>
 			<SearchHeader />
 			<Scrollable>
+				{/* CATEGORIES */}
 				<Section>Shop by category</Section>
 				<Categories>
 					<CategoryComp
@@ -35,10 +42,14 @@ const Home = ({ navigation }) => {
 						title="Home"
 					/>
 				</Categories>
-				<View>
+
+				{/* POPULAR ITEMS */}
+				<PopularView>
 					<Section>Popular items</Section>
-					<Text>See all</Text>
-				</View>
+					<MiniSeeAll onPress={() => navigate("Popular")}>
+						See all
+					</MiniSeeAll>
+				</PopularView>
 				<PopularItems horizontal={true}>
 					<ItemCard
 						destination={"Home"}
@@ -72,7 +83,7 @@ const Home = ({ navigation }) => {
 						sizes="One size"
 						brand="Boutique indépendante"
 					/>
-					<Text>See all popular items</Text>
+					<SeeAll destination="Popular" />
 				</PopularItems>
 			</Scrollable>
 
@@ -95,6 +106,20 @@ const Section = styled.Text`
 
 const PopularItems = styled.ScrollView`
 	padding: 15px 18px 10px 18px;
+`;
+
+const PopularView = styled.View`
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+`;
+
+const MiniSeeAll = styled.Text`
+	/* I'm forced to do this
+	 because it doesn't seem like this is used anywhere else. */
+	color: #39b2bd;
+	font-size: 17px;
+	padding-right: 15px;
 `;
 
 const Categories = styled.View`

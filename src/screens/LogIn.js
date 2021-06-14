@@ -3,7 +3,7 @@ import { View } from "react-native";
 import styled from "styled-components";
 import MintButton from "../components/MintButton";
 
-const LogIn = ({ navigation }) => {
+const LogIn = () => {
 	return (
 		<Container>
 			<InputContainer>
@@ -13,12 +13,7 @@ const LogIn = ({ navigation }) => {
 				<Input placeholder="Password" />
 			</InputContainer>
 			<View style={{ alignItems: "center" }}>
-				<MintButton
-					navigation={navigation}
-					destination={"Home"}
-					text="Log in"
-					version="full"
-				/>
+				<MintButton destination={"Home"} text="Log in" version="full" />
 			</View>
 		</Container>
 	);

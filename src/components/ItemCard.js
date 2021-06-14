@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/core";
-import { View, Button, Text, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 import styled from "styled-components";
 
 const ItemCard = ({ destination, image, price, favNum, sizes, brand }) => {
@@ -8,7 +8,6 @@ const ItemCard = ({ destination, image, price, favNum, sizes, brand }) => {
 	const [favCount, setFavCount] = useState(favNum);
 
 	useEffect(() => {
-		console.log(favorite);
 		if (favorite === true) {
 			setFavCount(favNum + 1);
 		} else if (favorite === false) {
@@ -19,9 +18,9 @@ const ItemCard = ({ destination, image, price, favNum, sizes, brand }) => {
 	const { navigate } = useNavigation();
 	return (
 		<Container>
-			<PopularStyle activeOpacity={1}>
+			<CardStyle activeOpacity={1}>
 				<ItemPic source={image} onPress={() => navigate(destination)} />
-			</PopularStyle>
+			</CardStyle>
 			<InfoContainer>
 				<TopContainer>
 					<LeftSubContainer>
@@ -64,7 +63,7 @@ const Container = styled.View`
 	align-items: center;
 `;
 
-const PopularStyle = styled.TouchableOpacity`
+const CardStyle = styled.TouchableOpacity`
 	background-color: #f5f6f8;
 	align-items: center;
 	justify-content: center;
