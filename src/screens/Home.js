@@ -3,7 +3,7 @@ import { View, Button, Text, ScrollView } from "react-native";
 import styled from "styled-components";
 
 import CategoryComp from "../components/Category";
-import PopularItem from "../components/PopularItem";
+import ItemCard from "../components/ItemCard";
 import Footer from "../components/Footer";
 import SearchHeader from "../components/SearchHeader";
 
@@ -40,31 +40,35 @@ const Home = ({ navigation }) => {
 					<Text>See all</Text>
 				</View>
 				<PopularItems horizontal={true}>
-					<PopularItem
+					<ItemCard
 						destination={"Home"}
-						image=""
+						image={require("../images/some_dress.jpg")}
 						price="30.00"
+						favNum={10}
 						sizes="M / 38 / 10"
 						brand="Artigli"
 					/>
-					<PopularItem
+					<ItemCard
 						destination={"Home"}
-						image=""
+						image={require("../images/some_clothes.jpg")}
 						price="4.00"
+						favNum={12}
 						sizes="S / 36 / 8"
 						brand="H&M"
 					/>
-					<PopularItem
+					<ItemCard
 						destination={"Home"}
-						image=""
+						image={require("../images/some_top.jpg")}
 						price="5.99"
+						favNum={9}
 						sizes="M / 38 / 10"
 						brand=""
 					/>
-					<PopularItem
+					<ItemCard
 						destination={"Home"}
-						image=""
+						image={require("../images/some_necklace.jpg")}
 						price="4.00"
+						favNum={14}
 						sizes="One size"
 						brand="Boutique indépendante"
 					/>

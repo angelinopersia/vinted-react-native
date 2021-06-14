@@ -3,18 +3,23 @@ import { useNavigation } from "@react-navigation/core";
 import { View, Button, Text, TouchableOpacity } from "react-native";
 import styled from "styled-components";
 
-const Category = ({ destination, image, price, sizes, brand }) => {
+const ItemCard = ({ destination, image, price, favNum, sizes, brand }) => {
 	const [favorite, setFavorite] = useState(false);
-	const [favCount, setFavCount] = useState();
+	const [favCount, setFavCount] = useState(favNum);
 
-	// useEffect(() => {
-	// 	console.log(favorite);
-	// });
+	useEffect(() => {
+		console.log(favorite);
+		if (favorite === true) {
+			setFavCount(favNum + 1);
+		} else if (favorite === false) {
+			setFavCount(favNum);
+		}
+	});
 
 	const { navigate } = useNavigation();
 	return (
 		<Container>
-			<PopularStyle>
+			<PopularStyle activeOpacity={1}>
 				<ItemPic source={image} onPress={() => navigate(destination)} />
 			</PopularStyle>
 			<InfoContainer>
@@ -25,6 +30,7 @@ const Category = ({ destination, image, price, sizes, brand }) => {
 					<RightSubContainer>
 						{favorite === false ? (
 							<TouchableOpacity
+								activeOpacity={1}
 								onPress={() => setFavorite(!favorite)}
 							>
 								<Fav
@@ -33,6 +39,7 @@ const Category = ({ destination, image, price, sizes, brand }) => {
 							</TouchableOpacity>
 						) : (
 							<TouchableOpacity
+								activeOpacity={1}
 								onPress={() => setFavorite(!favorite)}
 							>
 								<Fav
@@ -41,7 +48,7 @@ const Category = ({ destination, image, price, sizes, brand }) => {
 								/>
 							</TouchableOpacity>
 						)}
-						<FavNumbers>10</FavNumbers>
+						<FavNumbers>{favCount}</FavNumbers>
 					</RightSubContainer>
 				</TopContainer>
 				<BottomContainer>
@@ -63,14 +70,14 @@ const PopularStyle = styled.TouchableOpacity`
 	justify-content: center;
 	padding: 10px;
 	margin: 7px;
-	width: 150px;
-	height: 200px;
+	width: 160px;
+	height: 220px;
 `;
 
 const ItemPic = styled.Image`
-	width: 25px;
-	height: 25px;
-	resize-mode: contain;
+	width: 160px;
+	height: 220px;
+	resize-mode: cover;
 `;
 
 const InfoContainer = styled.View`
@@ -88,18 +95,18 @@ const BottomContainer = styled.View`
 
 const LeftSubContainer = styled.View`
 	padding: 5px;
-	width: 90px;
+	width: 95px;
 `;
 
 const RightSubContainer = styled.View`
 	padding: 5px;
 	flex-direction: row;
 	justify-content: flex-end;
-	width: 60px;
+	width: 65px;
 `;
 
 const PriceText = styled.Text`
-	font-size: 15px;
+	font-size: 14px;
 `;
 
 const Sizes = styled.Text`
@@ -115,18 +122,18 @@ const Brand = styled.Text`
 `;
 
 const Fav = styled.Image`
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 	margin: 2px;
 	resize-mode: contain;
 `;
 
 const FavNumbers = styled.Text`
 	color: #999999;
-	font-size: 15px;
+	font-size: 14px;
 `;
 
 // arrive on search page AND specific tab according to title
 // No touchableopacity animation
 
-export default Category;
+export default ItemCard;
