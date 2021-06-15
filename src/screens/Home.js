@@ -12,6 +12,7 @@ import MinItemCard from "../components/MinItemCard";
 import ItemCard from "../components/ItemCard";
 import Brand from "../components/Brand";
 import Suggested from "../components/Suggested";
+import WardrobeSpotlight from "../components/WardrobeSpotlight";
 
 import SeeAll from "../components/SeeAll";
 
@@ -90,7 +91,7 @@ const Home = () => {
 						sizes="One size"
 						brand="Boutique indépendante"
 					/>
-					<SeeAll destination="Popular" />
+					<SeeAll destination="Popular" items="popular" />
 				</PopularItems>
 
 				{/* SHOP BY BRAND */}
@@ -194,6 +195,110 @@ const Home = () => {
 						pfp={require("../images/basic_google_avatar_L.jpg")}
 					/>
 				</NewsfeedContainer>
+				<WardrobeSpotlight />
+				<NewsfeedContainer>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+					<ItemCard
+						destination={"Home"}
+						image={require("../images/some_dress.jpg")}
+						price="30.00"
+						favNum={10}
+						sizes="M / 38 / 10"
+						brand="Artigli"
+						poster="mariaa__a"
+						pfp={require("../images/basic_google_avatar_L.jpg")}
+					/>
+				</NewsfeedContainer>
+				<WardrobeSpotlight />
 			</Scrollable>
 
 			<Footer activePage="Home" />

@@ -2,12 +2,12 @@ import React from "react";
 import { useNavigation } from "@react-navigation/core";
 import styled from "styled-components";
 
-const SeeAll = ({ destination }) => {
+const SeeAll = ({ destination, items }) => {
 	const { navigate } = useNavigation();
 
 	return (
 		<Container onPress={() => navigate(destination)}>
-			<Text>See all popular items</Text>
+			<Text>See all {items} items</Text>
 		</Container>
 	);
 };
@@ -16,7 +16,7 @@ const SeeAll = ({ destination }) => {
 const Container = styled.TouchableOpacity`
 	justify-content: center;
 	height: 280px;
-	width: 150px;
+	width: 140px;
 	padding: 10px;
 	margin: 5px 25px 0 0;
 `;

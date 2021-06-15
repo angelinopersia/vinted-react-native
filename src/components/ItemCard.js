@@ -94,8 +94,8 @@ const OPsUsername = styled.Text`
 const OPsAvatar = styled.Image`
 	border-radius: 50px;
 	margin: 0 8px 0 8px;
-	height: 28px;
-	width: 28px;
+	height: 22px;
+	width: 22px;
 `;
 
 const CardStyle = styled.TouchableOpacity`
