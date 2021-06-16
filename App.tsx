@@ -70,7 +70,14 @@ export default function App() {
 					}}
 				/>
 				<Stack.Screen name="Inbox" component={Inbox} />
-				<Stack.Screen name="Chat" component={Chat} />
+				<Stack.Screen
+					name="Chat"
+					component={Chat}
+					options={{
+						headerShown: true,
+						title: "Team Vinted",
+					}}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
