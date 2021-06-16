@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { StatusBar } from "react-native";
+import { StatusBar, Text } from "react-native";
 
 import Intro from "./src/screens/Intro";
 import LogSign from "./src/screens/LogSign";
@@ -63,7 +63,14 @@ export default function App() {
 				<Stack.Screen name="Home" component={Home} />
 				<Stack.Screen name="Popular" component={Popular} />
 				<Stack.Screen name="Search" component={Search} />
-				<Stack.Screen name="Sell" component={Sell} />
+				<Stack.Screen
+					name="Sell"
+					component={Sell}
+					options={{
+						headerShown: true,
+						title: "Sell an item",
+					}}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
