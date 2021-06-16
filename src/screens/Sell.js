@@ -38,20 +38,20 @@ const Sell = ({ navigation }) => {
 					</TitleDesc>
 				</DescriptionSection>
 				<Separator />
-				<Others>
+				<Others top>
 					<OthersText>Category</OthersText>
 				</Others>
-				<Others>
+				<Others top>
 					<OthersText>Brand</OthersText>
 				</Others>
-				<Others>
+				<Others top bot>
 					<OthersText>Condition</OthersText>
 				</Others>
 				<Separator />
-				<Others>
+				<Others top>
 					<OthersText>Price</OthersText>
 				</Others>
-				<Others>
+				<Others top bot>
 					<OthersText>I'm interested in swapping this</OthersText>
 				</Others>
 				<ButtonView>
@@ -74,6 +74,8 @@ const Sell = ({ navigation }) => {
 };
 
 // If came from tutorial, make X return to home?
+// Add chevrons, add tick box, inputs placeholders need to shift below when selected
+// Remove input line of description
 
 export default Sell;
 
@@ -156,13 +158,14 @@ const DescriptionSection = styled.View`
 	background-color: #ffffff;
 `;
 
-const Others = styled.View`
+const Others = styled.TouchableOpacity`
 	justify-content: center;
 	background-color: #ffffff;
 	padding: 15px;
 	height: 55px;
 	border-color: #e3e4e6;
-	border-width: 1px;
+	border-top-width: ${(props) => (props.top ? "1px" : "0")};
+	border-bottom-width: ${(props) => (props.bot ? "1px" : "0")};
 `;
 
 const OthersText = styled.Text`
