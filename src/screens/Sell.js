@@ -73,7 +73,7 @@ const Sell = ({ navigation }) => {
 	);
 };
 
-// If came from tutorial, make X return to home?
+// If came from tutorial, make X return to home? (and put X in header)
 // Add chevrons, add tick box, inputs placeholders need to shift below when selected
 // Remove input line of description
 

@@ -14,17 +14,15 @@ import Home from "./src/screens/Home";
 import Popular from "./src/screens/Popular";
 import Search from "./src/screens/Search";
 import Sell from "./src/screens/Sell";
+import Inbox from "./src/screens/Inbox";
+import Chat from "./src/screens/Chat";
 
 const Stack = createStackNavigator();
 
 export default function App() {
 	return (
 		<NavigationContainer>
-			<StatusBar
-				translucent={true}
-				backgroundColor={"white"}
-				barStyle={"dark-content"}
-			/>
+			<StatusBar backgroundColor={"white"} barStyle={"dark-content"} />
 			<Stack.Navigator
 				screenOptions={{
 					headerShown: false,
@@ -71,6 +69,8 @@ export default function App() {
 						title: "Sell an item",
 					}}
 				/>
+				<Stack.Screen name="Inbox" component={Inbox} />
+				<Stack.Screen name="Chat" component={Chat} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

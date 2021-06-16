@@ -1,6 +1,12 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "plugins": [{
+      "name": "typescript-styled-plugin",
+      "lint": {
+        "validProperties": ["shadow-color", "shadow-opacity", "shadow-offset", "resize-mode"]
+      }
+    }],
     "strict": true
   }
 }
