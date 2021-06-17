@@ -122,6 +122,8 @@ const Profile = () => {
 
 export default Profile;
 
+// The terms must link to stuff
+
 const Container = styled.View`
 	background-color: #f5f6f8;
 	flex: 1;
