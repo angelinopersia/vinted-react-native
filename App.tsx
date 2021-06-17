@@ -16,6 +16,7 @@ import Search from "./src/screens/Search";
 import Sell from "./src/screens/Sell";
 import Inbox from "./src/screens/Inbox";
 import Chat from "./src/screens/Chat";
+import Profile from "./src/screens/Profile";
 
 const Stack = createStackNavigator();
 
@@ -76,6 +77,14 @@ export default function App() {
 					options={{
 						headerShown: true,
 						title: "Team Vinted",
+					}}
+				/>
+				<Stack.Screen
+					name="Profile"
+					component={Profile}
+					options={{
+						headerShown: true,
+						title: "Profile",
 					}}
 				/>
 			</Stack.Navigator>
