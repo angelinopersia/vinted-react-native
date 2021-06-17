@@ -33,7 +33,7 @@ const Footer = ({ activePage }) => {
 			)}
 			{/* SELL */}
 			<Page onPress={() => navigate("Sell")}>
-				<Icon source={require("../images/sellEMPTY.png")} />
+				<Icon source={require("../images/sellEMPTY.png")} sell />
 				<IconText1>Sell</IconText1>
 			</Page>
 			{/* INBOX */}
@@ -67,26 +67,30 @@ const Footer = ({ activePage }) => {
 // Styles
 const FooterStyle = styled.View`
 	background-color: white;
-	border-top-width: 2px;
+	border-top-width: 1px;
 	border-color: #ececec;
-	height: 70px;
+	height: 60px;
 	flex-direction: row;
 	justify-content: space-around;
 `;
 
 const Icon = styled.Image`
-	width: 25px;
-	height: 25px;
-	margin: 5px;
+	width: ${(props) => (props.sell ? "25px" : "22px")};
+	height: ${(props) => (props.sell ? "25px" : "22px")};
+	margin-top: ${(props) => (props.sell ? "8px" : "10px")};
+	/* This stuff above was to deal with the Sell icon being bigger than others */
+	margin-bottom: 3px;
 	resize-mode: contain;
 `;
 
 const IconText1 = styled.Text`
 	color: #666666;
+	font-size: 12px;
 `;
 
 const IconText2 = styled.Text`
 	color: #39b2bd;
+	font-size: 12px;
 `;
 
 const Page = styled.TouchableOpacity`

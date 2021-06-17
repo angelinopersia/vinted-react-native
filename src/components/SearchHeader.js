@@ -2,9 +2,9 @@ import React from "react";
 import { View, Button, Text } from "react-native";
 import styled from "styled-components";
 
-const SearchHeader = ({ navigation, destination }) => {
+const SearchHeader = ({ navigation, destination, noBotBorder }) => {
 	return (
-		<SearchHeaderStyle>
+		<SearchHeaderStyle noBotBorder={noBotBorder}>
 			<InputContainer>
 				<Magnifier source={require("../images/searchEMPTY.png")} />
 				<Input placeholder="Search for items or members" />
@@ -16,7 +16,8 @@ const SearchHeader = ({ navigation, destination }) => {
 // Styles
 const SearchHeaderStyle = styled.View`
 	background-color: white;
-	border-bottom-width: 2px;
+	border-bottom-width: ${(props) =>
+		props.noBotBorder === true ? "0px" : "2px"};
 	border-color: #ececec;
 	height: 60px;
 `;
