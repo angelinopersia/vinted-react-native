@@ -6,7 +6,7 @@ const SearchHeader = ({ navigation, destination }) => {
 	return (
 		<SearchHeaderStyle>
 			<InputContainer>
-				<Magnifier>O</Magnifier>
+				<Magnifier source={require("../images/searchEMPTY.png")} />
 				<Input placeholder="Search for items or members" />
 			</InputContainer>
 		</SearchHeaderStyle>
@@ -18,12 +18,14 @@ const SearchHeaderStyle = styled.View`
 	background-color: white;
 	border-bottom-width: 2px;
 	border-color: #ececec;
-	height: 85px;
+	height: 60px;
 `;
 
-const Magnifier = styled.Text`
-	padding: 0 5px 0 5px;
-	font-size: 16px;
+const Magnifier = styled.Image`
+	margin: 5px;
+	height: 15px;
+	width: 15px;
+	resize-mode: contain;
 `;
 
 const Input = styled.TextInput`
@@ -34,7 +36,7 @@ const Input = styled.TextInput`
 const InputContainer = styled.View`
 	background-color: #f5f6f8;
 	border-radius: 5px;
-	margin: 35px 10px 0px 10px;
+	margin: 10px 10px 0px 10px;
 	padding: 5px;
 	flex-direction: row;
 	align-items: center;
