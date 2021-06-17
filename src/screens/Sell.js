@@ -3,6 +3,7 @@ import { View, Text } from "react-native";
 import styled from "styled-components";
 
 import MintButton from "../components/MintButton";
+import Flyer from "../components/Flyer";
 
 const Sell = ({ navigation }) => {
 	return (
@@ -38,22 +39,12 @@ const Sell = ({ navigation }) => {
 					</TitleDesc>
 				</DescriptionSection>
 				<Separator />
-				<Others top>
-					<OthersText>Category</OthersText>
-				</Others>
-				<Others top>
-					<OthersText>Brand</OthersText>
-				</Others>
-				<Others top bot>
-					<OthersText>Condition</OthersText>
-				</Others>
+				<Flyer topLine={true} botLine={true} text="Category" />
+				<Flyer botLine={true} text="Brand" />
+				<Flyer botLine={true} text="Condition" />
 				<Separator />
-				<Others top>
-					<OthersText>Price</OthersText>
-				</Others>
-				<Others top bot>
-					<OthersText>I'm interested in swapping this</OthersText>
-				</Others>
+				<Flyer topLine={true} botLine={true} text="Price" />
+				<Flyer botLine={true} text="I'm interested in swapping this" />
 				<ButtonView>
 					<MintButton text="Upload" version="full" />
 				</ButtonView>
