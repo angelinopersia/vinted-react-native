@@ -16,7 +16,7 @@ const SignUp = ({ navigation }) => {
 					</RegText>
 					<RegText
 						style={{ color: "#39b2bd" }}
-						onPress={() => navigation.navigate("Home")}
+						onPress={() => navigation.navigate("Main")}
 					>
 						terms of uses
 					</RegText>
@@ -26,7 +26,7 @@ const SignUp = ({ navigation }) => {
 					<RegText>read the </RegText>
 					<RegText
 						style={{ color: "#39b2bd" }}
-						onPress={() => navigation.navigate("Home")}
+						onPress={() => navigation.navigate("Main")}
 					>
 						privacy policy
 					</RegText>

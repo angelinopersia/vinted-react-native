@@ -10,6 +10,7 @@ import SignUp from "./src/screens/SignUp";
 import LogIn from "./src/screens/LogIn";
 
 import Tutorial from "./src/screens/Tutorial";
+import Main from "./src/screens/Main";
 import Home from "./src/screens/Home";
 import Popular from "./src/screens/Popular";
 import Search from "./src/screens/Search";
@@ -59,17 +60,7 @@ export default function App() {
 				/>
 				<Stack.Screen name="Tutorial" component={Tutorial} />
 
-				<Stack.Screen name="Home" component={Home} />
-				<Stack.Screen name="Popular" component={Popular} />
-				<Stack.Screen name="Search" component={Search} />
-				<Stack.Screen
-					name="Sell"
-					component={Sell}
-					options={{
-						headerShown: true,
-						title: "Sell an item",
-					}}
-				/>
+				<Stack.Screen name="Main" component={Main} />
 				<Stack.Screen name="Inbox" component={Inbox} />
 				<Stack.Screen
 					name="Chat"

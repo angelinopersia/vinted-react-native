@@ -6,7 +6,7 @@ const Tutorial = ({ navigation }) => {
 		<View
 			style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
 		>
-			<Button title="Skip" onPress={() => navigation.navigate("Home")} />
+			<Button title="Skip" onPress={() => navigation.navigate("Main")} />
 			<Text>Placeholder for the 3 pages</Text>
 			<Button
 				title="Upload"

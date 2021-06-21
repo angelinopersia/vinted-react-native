@@ -17,7 +17,7 @@ const LogIn = () => {
 				/>
 			</InputContainer>
 			<View style={{ alignItems: "center" }}>
-				<MintButton destination={"Home"} text="Log in" version="full" />
+				<MintButton destination={"Main"} text="Log in" version="full" />
 			</View>
 		</Container>
 	);
