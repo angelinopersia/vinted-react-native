@@ -1,10 +1,10 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Modal } from "react-native";
 import styled from "styled-components";
 
 const Flyer = ({ navigation, topLine, botLine, icon, text }) => {
 	return (
-		<Container top={topLine} bot={botLine}>
+		<Container top={topLine} bot={botLine} activeOpacity={1}>
 			<LeftSide>
 				{icon != undefined && <Icon source={icon} />}
 				<TextContainer>
@@ -33,8 +33,6 @@ const Container = styled.TouchableOpacity`
 
 const LeftSide = styled.View`
 	flex-direction: row;
-	/* border-width: 1px;
-	border-color: red; */
 	align-items: center;
 	width: 60%;
 `;
@@ -58,8 +56,9 @@ const Icon = styled.Image`
 `;
 
 const TextContainer = styled.Text`
-	/* padding: 0 10px 0 10px; */
+	/*  */
 `;
+
 const Text = styled.Text`
 	font-size: 16px;
 `;
