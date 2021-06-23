@@ -15,16 +15,11 @@ const Intro = ({ navigation }) => {
 				<HeaderText>Sell pre-loved clothes completely free</HeaderText>
 			</Header>
 
-			<MintButton
-				destination={"SignUp"}
-				text="Sign up for Vinted"
-				signUp
-			/>
+			<MintButton destination={"SignUp"} text="Sign up for Vinted" />
 			<MintButton
 				destination={"LogIn"}
 				text="I already have an account"
 				emptyStyle={true}
-				logIn
 			/>
 
 			<AboutVinted>

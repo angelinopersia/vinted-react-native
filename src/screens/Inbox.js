@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Footer from "../components/Footer";
 import Message from "../components/Message";
 
+// TAB STUFF
 const renderTabBar = (props) => (
 	<TabBar
 		activeColor="black"
@@ -25,7 +26,6 @@ const renderTabBar = (props) => (
 		pressColor="transparent"
 	/>
 );
-
 const MessagesRoute = () => (
 	<Scrollable style={{ flex: 1 }}>
 		<Message
@@ -36,7 +36,6 @@ const MessagesRoute = () => (
 		/>
 	</Scrollable>
 );
-
 const NotificationsRoute = () => (
 	<View
 		style={{
@@ -53,12 +52,12 @@ const NotificationsRoute = () => (
 		</Text>
 	</View>
 );
-
 const renderScene = SceneMap({
 	messages: MessagesRoute,
 	notifications: NotificationsRoute,
 });
 
+// RENDER
 const Inbox = ({ navigation }) => {
 	const layout = useWindowDimensions();
 

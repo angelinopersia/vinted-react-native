@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigation } from "@react-navigation/core";
 import styled from "styled-components";
 
-const MintButton = ({ destination, text, emptyStyle, logIn, signUp }) => {
+const MintButton = ({ destination, text, emptyStyle }) => {
 	const { navigate } = useNavigation();
 
 	return (
