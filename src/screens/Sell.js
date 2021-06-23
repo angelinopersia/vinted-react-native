@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Text } from "react-native";
 import styled from "styled-components";
 
 import MintButton from "../components/MintButton";
 import Flyer from "../components/Flyer";
 
-const Sell = ({ navigation }) => {
+const Sell = ({}) => {
 	return (
 		<Container>
 			<Scrollable>
@@ -64,7 +64,6 @@ const Sell = ({ navigation }) => {
 	);
 };
 
-// If came from tutorial, make X return to home? (and put X in header)
 // Add chevrons, add tick box, inputs placeholders need to shift below when selected
 // Remove input line of description
 
@@ -99,8 +98,6 @@ const UploadView = styled.TouchableOpacity`
 	justify-content: center;
 	align-items: center;
 	padding: 55px;
-	/* border: red;
-	border-width: 1px; */
 `;
 const UploadPhotos = styled.TouchableOpacity`
 	flex-direction: row;
@@ -117,8 +114,6 @@ const UploadText = styled.Text`
 	text-align: center;
 	color: #39b2bd;
 	font-size: ${(props) => (props.plus ? "18px" : "13px")};
-	/* border: red;
-	border-width: 1px; */
 `;
 
 /// TITLE DESCRIPTION SECTION ///
@@ -149,20 +144,6 @@ const DescriptionSection = styled.View`
 	background-color: #ffffff;
 `;
 
-const Others = styled.TouchableOpacity`
-	justify-content: center;
-	background-color: #ffffff;
-	padding: 15px;
-	height: 55px;
-	border-color: #e3e4e6;
-	border-top-width: ${(props) => (props.top ? "1px" : "0")};
-	border-bottom-width: ${(props) => (props.bot ? "1px" : "0")};
-`;
-
-const OthersText = styled.Text`
-	font-size: 17px;
-`;
-
 const ButtonView = styled.View`
 	align-items: center;
 	padding: 45px 0px 20px 0px;
@@ -184,6 +165,5 @@ const Mint = (props) => (
 );
 
 const Scrollable = styled.ScrollView`
-	/* border: red;
-	border-width: 1px; */
+	/*  */
 `;

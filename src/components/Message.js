@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/core";
 import { View } from "react-native";
 import styled from "styled-components";
 
-const Message = ({ destination, avatar, sender, object, date }) => {
+const Message = ({ avatar, sender, object, date }) => {
 	const { navigate } = useNavigation();
 	const [read, setRead] = useState(true);
 
@@ -59,11 +59,6 @@ const TextContainer = styled.View`
 const Text = styled.Text`
 	font-size: 16px;
 	color: ${(props) => (props.primary ? "black" : "#656766")};
-`;
-
-const When = styled.Text`
-	font-size: 12px;
-	color: ${(props) => (props.primary ? "black" : "#989a99")};
 `;
 
 const JustNow = styled.Text`

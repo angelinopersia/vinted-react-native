@@ -33,8 +33,6 @@ const Container = styled.TouchableOpacity`
 
 const LeftSide = styled.View`
 	flex-direction: row;
-	/* border-width: 1px;
-	border-color: red; */
 	align-items: center;
 	width: 60%;
 `;

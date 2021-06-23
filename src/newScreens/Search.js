@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, Text, useWindowDimensions } from "react-native";
+import { Text, useWindowDimensions } from "react-native";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import styled from "styled-components";
 
@@ -172,7 +172,7 @@ const renderScene = SceneMap({
 	home: HomeRoute,
 });
 
-const Search = ({ navigation }) => {
+const Search = ({}) => {
 	const layout = useWindowDimensions();
 
 	const [index, setIndex] = React.useState(0);

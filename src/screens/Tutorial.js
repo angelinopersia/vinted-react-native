@@ -1,6 +1,6 @@
 import React from "react";
-import { Image, Text, useWindowDimensions, View } from "react-native";
-import { TabView, SceneMap, TabBar } from "react-native-tab-view";
+import { Image, useWindowDimensions, View } from "react-native";
+import { TabView, SceneMap } from "react-native-tab-view";
 import MintButton from "../components/MintButton";
 import styled from "styled-components";
 
@@ -9,25 +9,6 @@ const win = Dimensions.get("window");
 const ratio = win.width / 1080;
 
 // TAB STUFF
-const renderTabBar = (props) => (
-	<TabBar
-		activeColor="black"
-		inactiveColor="#666666"
-		{...props}
-		renderLabel={({ route, color }) => (
-			<Text style={{ color, margin: 8 }}>{route.title}</Text>
-		)}
-		indicatorStyle={{ backgroundColor: "#39b2bd" }}
-		style={{
-			backgroundColor: "white",
-			elevation: 0,
-			borderBottomWidth: 1,
-			borderColor: "#e7e7e7",
-			marginBottom: -1,
-		}}
-		pressColor="transparent"
-	/>
-);
 const FirstRoute = () => (
 	<Page>
 		<Image

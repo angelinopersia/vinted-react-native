@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/core";
-import { Text } from "react-native";
 import styled from "styled-components";
 
 import MinItemCard from "../components/MinItemCard";

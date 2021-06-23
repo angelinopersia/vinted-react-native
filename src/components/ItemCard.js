@@ -169,6 +169,5 @@ const FavNumbers = styled.Text`
 
 // arrive on search page AND specific tab according to title
 // Add onpress for the profiles
-// No touchableopacity animation
 
 export default ItemCard;

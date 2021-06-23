@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Modal } from "react-native";
 import styled from "styled-components";
 
-const Flyer = ({ navigation, topLine, botLine, icon, text }) => {
+const Flyer = ({ topLine, botLine, icon, text }) => {
 	return (
 		<Container top={topLine} bot={botLine} activeOpacity={1}>
 			<LeftSide>

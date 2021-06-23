@@ -1,5 +1,4 @@
 import React from "react";
-import { Text } from "react-native";
 import styled from "styled-components";
 
 import ProfileFlyer from "../components/ProfileFlyer";

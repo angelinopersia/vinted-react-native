@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, Modal, View, Button } from "react-native";
+import { Text } from "react-native";
 import styled from "styled-components";
 import MintButton from "../components/MintButton";
 
@@ -60,12 +60,6 @@ const AboutVinted = styled.View`
 	flex-direction: row;
 	padding: 10px 10px 40px 10px;
 	text-align: center;
-`;
-
-const MrModal = styled.View`
-	background-color: red;
-	padding: 50px;
-	height: 50px;
 `;
 
 export default Intro;

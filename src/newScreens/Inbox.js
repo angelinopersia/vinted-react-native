@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Button, Text, useWindowDimensions } from "react-native";
+import { View, Text, useWindowDimensions } from "react-native";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import styled from "styled-components";
 

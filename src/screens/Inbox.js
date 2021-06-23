@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Button, Text, useWindowDimensions } from "react-native";
+import { View, Text, useWindowDimensions } from "react-native";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import styled from "styled-components";
 
@@ -58,7 +58,7 @@ const renderScene = SceneMap({
 });
 
 // RENDER
-const Inbox = ({ navigation }) => {
+const Inbox = ({}) => {
 	const layout = useWindowDimensions();
 
 	const [index, setIndex] = React.useState(0);

@@ -36,7 +36,4 @@ const CatPic = styled.Image`
 	resize-mode: contain;
 `;
 
-// arrive on search page AND specific tab according to title
-// No touchableopacity animation
-
 export default Category;

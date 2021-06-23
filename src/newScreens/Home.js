@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/core";
-import { View, Button, Text, ScrollView } from "react-native";
 import styled from "styled-components";
 
 // Components
@@ -327,7 +326,7 @@ const PopularView = styled.View`
 
 const MiniSeeAll = styled.Text`
 	/* I'm forced to do this
-	 because it doesn't seem like this is used anywhere else. */
+	because it doesn't seem like this is used anywhere else. */
 	color: #39b2bd;
 	font-size: 17px;
 	padding-right: 15px;

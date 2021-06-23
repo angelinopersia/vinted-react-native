@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Button, Text } from "react-native";
 import styled from "styled-components";
 
-const SearchHeader = ({ navigation, destination, noBotBorder }) => {
+const SearchHeader = ({ noBotBorder }) => {
 	return (
 		<SearchHeaderStyle noBotBorder={noBotBorder}>
 			<InputContainer>

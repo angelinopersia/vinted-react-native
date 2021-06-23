@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import Footer from "../components/Footer";
 
-const Search = ({ route, navigation }) => {
+const Search = ({ route }) => {
 	const { initial } = route.params;
 
 	return (
@@ -19,8 +19,4 @@ export default Search;
 const Container = styled.View`
 	background-color: white;
 	flex: 1;
-`;
-
-const Scrollable = styled.ScrollView`
-	/* padding: 15px 18px 10px 18px; */
 `;
