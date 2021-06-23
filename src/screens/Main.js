@@ -4,10 +4,12 @@ import styled from "styled-components";
 
 import Footer from "../components/Footer";
 
-const Search = ({ navigation }) => {
+const Search = ({ route, navigation }) => {
+	const { initial } = route.params;
+
 	return (
 		<Container>
-			<Footer />
+			<Footer initial={initial} />
 		</Container>
 	);
 };

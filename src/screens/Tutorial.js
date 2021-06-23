@@ -100,18 +100,6 @@ const Tutorial = ({ navigation }) => {
 	console.log(index);
 	return (
 		<Container>
-			{/* <View
-				style={{
-					flex: 1,
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
-				<Button
-					title="Skip"
-					onPress={() => navigation.navigate("Main")}
-				/>
-			</View> */}
 			<TabView
 				renderTabBar={() => null}
 				navigationState={{ index, routes }}
@@ -143,20 +131,46 @@ const Tutorial = ({ navigation }) => {
 				</View>
 			</IndicatorView>
 			<UploadView>
-				<MintButton destination={"Sell"} text="Upload" />
+				<MintButton
+					destination={"Main"}
+					text="Upload"
+					initialRoute="Sell"
+				/>
 			</UploadView>
+			<SkipView>
+				<SkipText
+					onPress={() =>
+						navigation.navigate("Main", {
+							initial: "Home",
+						})
+					}
+				>
+					Skip
+				</SkipText>
+			</SkipView>
 		</Container>
 	);
 };
 
 export default Tutorial;
 
-// Make so that you can't return to this page
-
 // Styles
 const Container = styled.View`
 	flex: 1;
 `;
+
+const SkipView = styled.View`
+	position: absolute;
+	justify-content: flex-end;
+	flex-direction: row;
+	padding: 15px;
+	width: 100%;
+`;
+const SkipText = styled.Text`
+	color: white;
+	font-size: 18px;
+`;
+
 const Page = styled.View`
 	flex: 1;
 `;
@@ -189,8 +203,4 @@ const UploadView = styled.View`
 	margin: 10px 0 10px 0;
 	justify-content: center;
 	align-items: center;
-`;
-
-const SkipView = styled.TouchableOpacity`
-	position: absolute;
 `;

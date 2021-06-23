@@ -2,13 +2,17 @@ import React from "react";
 import { useNavigation } from "@react-navigation/core";
 import styled from "styled-components";
 
-const MintButton = ({ destination, text, emptyStyle }) => {
+const MintButton = ({ destination, text, emptyStyle, initialRoute }) => {
 	const { navigate } = useNavigation();
 
 	return (
 		<MintButtonStyle
 			emptyStyle={emptyStyle}
-			onPress={() => navigate(destination)}
+			onPress={() =>
+				navigate(destination, {
+					initial: initialRoute,
+				})
+			}
 		>
 			<ButtonText emptyStyle={emptyStyle}>{text}</ButtonText>
 		</MintButtonStyle>
