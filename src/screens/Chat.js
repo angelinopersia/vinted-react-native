@@ -76,9 +76,6 @@ Team Vinted`}
 
 export default Chat;
 
-// Must make header title dependant on conversation and add Info to the right of header
-// Links aren't working for some reason
-
 const Container = styled.View`
 	background-color: white;
 	flex: 1;

@@ -132,7 +132,4 @@ const FavNumbers = styled.Text`
 	font-size: 14px;
 `;
 
-// arrive on search page AND specific tab according to title
-// No touchableopacity animation
-
 export default MinItemCard;

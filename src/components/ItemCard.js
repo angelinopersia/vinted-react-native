@@ -167,7 +167,4 @@ const FavNumbers = styled.Text`
 	font-size: 14px;
 `;
 
-// arrive on search page AND specific tab according to title
-// Add onpress for the profiles
-
 export default ItemCard;

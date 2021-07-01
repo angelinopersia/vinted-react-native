@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const Flyer = ({ topLine, botLine, icon, text }) => {
+const Flyer = ({ untouchable, topLine, botLine, icon, text, checkbox }) => {
 	return (
-		<Container top={topLine} bot={botLine} activeOpacity={1}>
+		<Container top={topLine} bot={botLine}>
 			<LeftSide>
 				{icon != undefined && <Icon source={icon} />}
 				<TextContainer>
@@ -11,7 +11,11 @@ const Flyer = ({ topLine, botLine, icon, text }) => {
 				</TextContainer>
 			</LeftSide>
 			<RightSide>
-				<Chevron source={require("../images/chevron.png")} />
+				{checkbox ? (
+					<Text>X</Text>
+				) : (
+					<Chevron source={require("../images/chevron.png")} />
+				)}
 			</RightSide>
 		</Container>
 	);
@@ -23,6 +27,7 @@ const Container = styled.TouchableOpacity`
 	flex-direction: row;
 	align-items: center;
 	background-color: #ffffff;
+	/* "#eaf8f9" is normally the color of the press */
 	padding: 15px;
 	height: 55px;
 	border-color: #e3e4e6;

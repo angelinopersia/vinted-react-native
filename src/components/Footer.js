@@ -3,11 +3,11 @@ import { useNavigation } from "@react-navigation/core";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import styled from "styled-components";
 
-import Home from "../newScreens/Home";
-import Search from "../newScreens/Search";
-import Sell from "../newScreens/Sell";
-import Inbox from "../newScreens/Inbox";
-import Profile from "../newScreens/Profile";
+import Home from "../screenComponents/Home";
+import Search from "../screenComponents/Search";
+import Sell from "../screenComponents/Sell";
+import Inbox from "../screenComponents/Inbox";
+import Profile from "../screenComponents/Profile";
 
 function HomeScreen() {
 	return <Home />;

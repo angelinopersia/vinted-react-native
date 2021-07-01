@@ -78,7 +78,7 @@ const Tutorial = ({ navigation }) => {
 		{ key: "second", title: "Second" },
 		{ key: "third", title: "Third" },
 	]);
-	console.log(index);
+
 	return (
 		<Container>
 			<TabView

@@ -44,7 +44,11 @@ const Sell = ({}) => {
 				<Flyer botLine={true} text="Condition" />
 				<Separator />
 				<Flyer topLine={true} botLine={true} text="Price" />
-				<Flyer botLine={true} text="I'm interested in swapping this" />
+				<Flyer
+					botLine={true}
+					text="I'm interested in swapping this"
+					checkbox
+				/>
 				<ButtonView>
 					<MintButton text="Upload" version="full" />
 				</ButtonView>
@@ -63,9 +67,6 @@ const Sell = ({}) => {
 		</Container>
 	);
 };
-
-// Add chevrons, add tick box, inputs placeholders need to shift below when selected
-// Remove input line of description
 
 export default Sell;
 

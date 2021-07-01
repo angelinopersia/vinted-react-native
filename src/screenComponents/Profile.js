@@ -119,9 +119,6 @@ const Profile = () => {
 
 export default Profile;
 
-// The terms must link to stuff
-// Add stuff like balance money
-
 const Container = styled.View`
 	background-color: #f5f6f8;
 	flex: 1;
