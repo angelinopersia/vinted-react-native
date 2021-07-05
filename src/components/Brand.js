@@ -7,7 +7,7 @@ const Brand = ({ destination, text }) => {
 	const { navigate } = useNavigation();
 
 	return (
-		<Container onPress={() => navigate(destination)}>
+		<Container>
 			<Text>{text}</Text>
 		</Container>
 	);

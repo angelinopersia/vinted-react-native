@@ -1,12 +1,9 @@
 import React from "react";
-import { useNavigation } from "@react-navigation/core";
 import styled from "styled-components";
 
-const SeeAll = ({ destination, items }) => {
-	const { navigate } = useNavigation();
-
+const SeeAll = ({ items }) => {
 	return (
-		<Container onPress={() => navigate(destination)}>
+		<Container>
 			<Text>See all {items} items</Text>
 		</Container>
 	);

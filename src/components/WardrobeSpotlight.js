@@ -67,7 +67,7 @@ const WardrobeSpotlight = ({ destination, text }) => {
 				<SeeAll destination="Popular" items={104} />
 			</Items>
 			<Header>
-				<SeeMore onPress={() => navigate("Popular")}>See more</SeeMore>
+				<SeeMore>See more</SeeMore>
 			</Header>
 			<GreySeparator />
 		</Container>

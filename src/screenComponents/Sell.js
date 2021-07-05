@@ -50,7 +50,11 @@ const Sell = ({}) => {
 					checkbox
 				/>
 				<ButtonView>
-					<MintButton text="Upload" version="full" />
+					<MintButton
+						text="Upload"
+						version="full"
+						destination="Home"
+					/>
 				</ButtonView>
 				<ArticleView>
 					<ArticleText>

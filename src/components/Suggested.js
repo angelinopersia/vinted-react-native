@@ -2,11 +2,9 @@ import React from "react";
 import { useNavigation } from "@react-navigation/core";
 import styled from "styled-components";
 
-const Suggested = ({ destination, title, viewNum }) => {
-	const { navigate } = useNavigation();
-
+const Suggested = ({ title, viewNum }) => {
 	return (
-		<Container onPress={() => navigate(destination)}>
+		<Container>
 			<BrandTitle>{title}</BrandTitle>
 			<ViewNumber>{viewNum}</ViewNumber>
 		</Container>

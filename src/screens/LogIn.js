@@ -14,6 +14,7 @@ const LogIn = () => {
 				<Input
 					placeholder="Password"
 					underlineColorAndroid="transparent"
+					secureTextEntry={true}
 				/>
 			</InputContainer>
 			<View style={{ alignItems: "center" }}>
