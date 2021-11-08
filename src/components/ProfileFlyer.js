@@ -9,6 +9,7 @@ const ProfileFlyer = ({ navigation, avatar, username }) => {
 				<AvatarContainer>
 					<Avatar source={avatar} />
 				</AvatarContainer>
+				{/* Sometimes it just doesn't load the border radius at all, idk why */}
 				<TextContainer>
 					<Text>{username}</Text>
 					<Text style={{ color: "#666666" }}>View my profile</Text>
