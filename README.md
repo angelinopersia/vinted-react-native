@@ -8,7 +8,7 @@
 
 I've created this project as proof of my frontend skills with limited time and packages required, only resorting to installing navigation and tab packages in order to shorten time spent on the project and obtain better, more efficient results. This way, I was able to take care of most of the important and common parts of the Vinted app's frontend.
 
-## Test it yourself !
+## Test it yourself!
 
 <p align=center>
 	<Text>Flash this QR code with the expo app !</Text>
@@ -33,7 +33,7 @@ The package manager **[yarn](https://classic.yarnpkg.com/lang/en/)** is required
 
 ## Want to contribute ?
 
-If you'd like to add your own part to this project, feel free to create a pull request with your addition !
+If you'd like to add your own part to this project, feel free to create a pull request with your addition!
 
 ## Reporting bugs
 
