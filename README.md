@@ -37,11 +37,11 @@ If you'd like to add your own part to this project, feel free to create a pull r
 
 ## Reporting bugs
 
-If you find a bug, please report it by [opening an issue](https://github.com/angelinopersia/papofic/issues/new)!
+If you find a bug, please report it by [opening an issue](https://github.com/angelinopersia/vinted-react-native/issues/new)!
 
 ## Suggestions
 
-If you have any ideas or suggestions to make Papofic better, such as new features or a new template, I'd be grateful to know!
+If you have any ideas or suggestions to make this clone better and more convincing, I'd be grateful to know!
 
 ## Star★ my project
 
